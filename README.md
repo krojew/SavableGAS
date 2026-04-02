@@ -4,9 +4,12 @@ SavableGAS provides a UAbilitySystemComponent subclass that can snapshot active 
 
 Supports saving attributes and gameplay effects, including eliminating possible double application. Only `Has Duration` effects (including those with infinite duration) are saved, because instant and infinite are assumed to be applied by the game logic.
 
-## Usage
+## Installation and Usage
 
-1. Replace `UAbilitySystemComponent` you use with `USavableAbilitySystemComponent`.
-2. In order to save whole state call `SaveState()` which populates a `FAbilitySystemSaveData` struct.
-3. Save this struct in a save game system of your chosing.
-4. To restore, pass it to the `RestoreState()` method.
+1. Install the plugin in your project Plugins folder.
+2. Replace `UAbilitySystemComponent` you use with `USavableAbilitySystemComponent`.
+3. In order to save whole state call `SaveState()` on `USavableAbilitySystemComponent` which populates a `FAbilitySystemSaveData` struct. This is possible via c++ or Blueprint.
+4. Save this struct in a save game system of your chosing (https://github.com/sinbad/SPUD recommended).
+5. To restore, pass the previously saved struct to the `RestoreState()` method of `USavableAbilitySystemComponent`. This, too, is possible via c++ or Blueprint.
+
+![usage](bp.png)
