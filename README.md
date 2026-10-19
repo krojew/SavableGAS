@@ -1,5 +1,7 @@
 # SavableGAS
 
+https://www.fab.com/listings/db245ab8-e7d0-43f3-8fb5-2affa04922f6
+
 SavableGAS provides a UAbilitySystemComponent subclass that can snapshot active duration Gameplay Effects (including periodic timing state) into a portable struct and restore them later. Intended to work with any save game system.
 
 Supports saving attributes and gameplay effects, including eliminating possible double application. By default only `Has Duration` effects are saved, because instant and infinite effects are assumed to be applied by the game logic.
